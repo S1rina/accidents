@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Ajouter un poste</title>
+</h:head>
+<h:body>
+<f:view>
+
+<p:panel  header="Ajout Un Poste" style="font-size:26px; font-weight:bold">
+
+<h:form id ="ajout">
+<h:panelGrid title="formulaire our l'ajout d'un poste" cellpadding="10" columns="2">
+<p:outputLabel value="Ville du poste :"></p:outputLabel>
+<p:inputText title="ville ou se trouve le poste" value="#{ajouterP.p.ville}"></p:inputText>
+<p:outputLabel value="Cite du poste :"></p:outputLabel>
+<p:inputText title="Cite ou se trouve le poste" value="#{ajouterP.p.cite}"></p:inputText>
+<p:outputLabel value="Province du poste :"></p:outputLabel>
+<p:inputText title="Province ou se trouve le poste" value="#{ajouterP.p.province}"></p:inputText>
+<p:outputLabel value="Nombre des employes du poste :"></p:outputLabel>
+<p:inputText title="Nombre employe dans ce poste" value="#{ajouterP.p.nbremp}"></p:inputText>
+<p:outputLabel value="Nom et Prenom du President du poste :"></p:outputLabel>
+<p:inputText title="Nom et prenom du responsable du poste" value="#{ajouterP.p.prespos}"></p:inputText>
+<p:outputLabel value="Date :"></p:outputLabel>
+<p:inputText title="date de creation du poste" value="#{ajouterP.p.date}"></p:inputText>
+
+  <p:commandButton title="en cliquant 'ajouter' ce poste va être ajouter dans la base" value="Ajouter" action="#{ajouterP.insert}"></p:commandButton>
+</h:panelGrid>
+</h:form>
+</p:panel>
+</f:view>
+</h:body>
+</html>
